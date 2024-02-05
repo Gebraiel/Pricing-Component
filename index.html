@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+
+  <!-- Our Pricing
+  Annually
+  Monthly
+
+  Basic
+  &dollar;19.99
+  &dollar;199.99
+  500 GB Storage
+  2 Users Allowed
+  Send up to 3 GB
+  Learn More
+
+  Professional
+  &dollar;24.99
+  &dollar;249.99
+  1 TB Storage
+  5 Users Allowed
+  Send up to 10 GB
+  Learn More
+
+  Master
+  &dollar;39.99
+  &dollar;399.99
+  2 TB Storage
+  10 Users Allowed
+  Send up to 20 GB
+  Learn More -->
+  <main class="container">
+    <h1>Our Pricing</h1>
+    <div class="toggle-container">
+      <span>Annually</span>
+      <button></button>
+      <span>monthly</span>
+    </div>
+    <div class="cards">
+      <div class="card basic">
+        <b>Basic</b><br>
+        <strong class="monthly active"><small>$</small>19.99</strong>
+        <strong class="yearly"><small>$</small>199.99</strong>
+        <ul>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB</li>
+        </ul>
+        <button>LEARN MORE </button>
+      </div>
+      <div class="card proffesional active">
+        <b>Proffesional</b><br>
+        <strong class="monthly active"><small>$</small>24.99</strong>
+        <strong class="yearly"><small>$</small>249.99</strong>
+        <ul>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+        <button>LEARN MORE </button>
+      </div>
+      <div class="card master">
+        <b>Master</b><br>
+        <strong class="monthly active"><small>$</small>39.99</strong>
+        <strong class="yearly"><small>$</small>399.99</strong>
+        <ul>
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+        <button>LEARN MORE </button>
+      </div>
+    </div>
+  </main>
+  <script>
+    let toggle = document.querySelector('.toggle-container button');
+    let yearly = document.querySelectorAll('strong.yearly');
+    let monthly = document.querySelectorAll('strong.monthly');
+    toggle.addEventListener('click',function(){
+      toggle.classList.toggle('on');
+      monthly.forEach((e)=>e.classList.toggle('active'));
+      yearly.forEach((e)=>e.classList.toggle('active'));
+    })
+  </script>
+</body>
+</html>
